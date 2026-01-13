@@ -1,0 +1,143 @@
+\section{Types of Quadric Surfaces}
+
+In the same way we take hyperplanes, we can also take titled hyperplanes with specific angles. Each specific angle has a different intersection that produces different quadric surfaces. For a standard hypercone with no coefficients on its dimensions, the following angles will produce:
+
+
+\begin{itemize}
+    \item $\theta \geq 45^\circ$: Unbounded Cross Section $\Longrightarrow$ Hyperboloid
+    \item $0^\circ \leq \theta < 45^\circ$: Bounded Cross Section $\Longrightarrow$ Ellipsoid
+    \item $\theta = 45^\circ$: Conic Degeneration $\Longrightarrow$ Paraboloid
+    \item $\theta = 0^\circ$: Perpendicular Bounded Cross Section $\Longrightarrow$ Sphere
+\end{itemize}
+
+
+% \begin{align}
+%     & z^2 = y^2 \\
+%     & |z| = |y| \\
+% \end{align}
+
+
+We can classify these quadric surfaces into two categories: generate and degenerate quadrics. Through connecting linear algebra with calculus, we can obtain the quadric surfaces into a matrix form. 
+
+\begin{definition}
+A quadric surface can be defined with the following. 
+
+\begin{align}
+& \text{Let} X = \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} ,\quad 
+    Q = \begin{bmatrix}
+    J & G/2 & E & I/2 \\
+    G/2 & A & D/2 & E/2 \\
+    H/2 & D/2 & B & F/2 \\
+    I/2 & E/2 & F/2 & C
+\end{bmatrix}, \quad Q_3 =
+\begin{bmatrix}
+ J & G/2 & E \\
+G/2 & A & D/2 \\
+H/2 & D/2 & B
+\end{bmatrix}. \\ 
+& \boxed{X^T Q X = 0}
+\end{align}
+
+\end{definition}
+
+\begin{definition}
+
+\begin{align}
+& \text{A degenerate quadric surface is when} \det(Q_3) \ne 0. \\
+& \text{A generate quadric surface is when} \det(Q_3) = 0.
+\end{align}
+
+\end{definition}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Possible-quadric-surfaces-built-from-the-intersection-of-a-hypercone-with-a-hyperplane.png}
+    \caption{Possible quadric surfaces}
+    \label{fig:placeholder}
+\end{figure}
+
+%-----------------------------------------
+\newpage
+\subsection{Spheres \& Ellipsoid}
+
+\begin{figure}[h]
+    \begin{minipage}{0.49\textwidth}
+     As previously discussed, one can get a sphere by setting the hyperplane cross section to $w=c$. If one rotates the hyperplane intersecting the hyper cone less than when it may exceed an angle of $\frac{\pi}{4}$ they can distort the section giving an ellipsoid.
+
+Ellipsoid equation:
+Set $w = (Ax+ By+ Cz + c)$ where it to generates a hyperplane whose angle from the central cross section of the hyper cone is less than $\frac{\pi}{4}$. 
+
+\begin{equation}
+    A(x-h)^2 + B(y-k)^2 + C(z-l)^2 = w
+\end{equation}
+
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,keepaspectratio]{2560px-Ellipsoide.png}
+        \caption{A sphere and different distortions of it creating ellipsoid variants}
+    \end{minipage}
+\end{figure}
+%--------------------------------------------------
+\subsection{Elliptic \& Hyperbolic Paraboloid}
+
+One can make an elliptic paraboloid in the same way except have the angle between the central cross section and the hyperplane w is set to to be $\frac{\pi}{4}$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.2\linewidth]{Paraboloid_of_Revolution.svg.png}
+    \caption{Elliptic Paraboloid in a 3D Space}
+    \label{fig:stuff}
+\end{figure}
+% \subsection{Hyperboloid of One \& Two Sheets}
+% A hyperboloid of 2 two sheets can be obtained by choosing a linear tilted hyperplane
+
+% Start with the equation for a 4D hyper cone
+% \begin{equation}
+%     x^2 + y^2 + z^2 = w^2
+% \end{equation}
+
+% Intersect this hyper cone with a hyperplane by making the substitution
+
+% \begin{equation}
+%     w=(ac+d)
+% \end{equation}
+
+% By now we have established that taking a cross sections of a hyper cone generates quadric surfaces. 
+% (maybe include)
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.3\linewidth]{250px-Hyperboloid2.png}
+%     \caption{Hyperboloid of Two Sheets in a 3D space}
+%     \label{fig:placeholder}
+% \end{figure}
+
+
+% \subsection{Weird hyperplane cross section Cases}
+
+% \subsubsection{Elliptic Cone}
+% \subsubsection{Elliptic Cylinder}
+% \subsection{Cone}
+
+% \subsection{Hyperboloid of One Sheet}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.3\linewidth]{Hyperboloid1.png}
+%     \caption{Hyperboloid of One Sheet in a 3D space}
+%     \label{fig:placeholder}
+% \end{figure}
+
+
+
+% \includemedia[
+%   activate=onclick,
+%   width=300pt, height=200pt,
+%   3Dtoolbar, label=3d_model.u3d % Path to your U3D file
+% ]{}{3d_model.u3d}
+
+\section{Conclusion}
+
+By noticing patterns in math through a geometric lens and applying them across dimensions, we reveal underlying properties that unify ideas which seem unrelated. We recapped how conic sections are created from intersecting a plane with a 3D cone at varying angles, which produces circles, ellipses, parabolas, and hyperbolas. Once we extended this idea into the 4th dimension we can see that all quadric surfaces are related to the cross sections of a 4D hyper cone. The type of quadric surface obtained is dependent on the orientation and position of of the intersecting hyperplane. This is the direct 3D equivalent of eccentricity found in conic sections.

@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{graphicx, float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[left=1in, right=1in, top=0.25in, bottom=1in]{geometry}
+\usepackage{caption, booktabs, subcaption}
+\usepackage{sectsty, amsmath, amssymb, amsthm}
+\usepackage{media9, hyperref, thmtools}
+
+
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{intersections, calc, backgrounds}
+
+\usepackage{pst-plot}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+
+% small fix for canvas is xy plane at z % https://tex.stackexchange.com/a/48776/121799
+\makeatletter
+\tikzoption{canvas is xy plane at z}[]{%
+    \def\tikz@plane@origin{\pgfpointxyz{0}{0}{#1}}%
+    \def\tikz@plane@x{\pgfpointxyz{1}{0}{#1}}%
+    \def\tikz@plane@y{\pgfpointxyz{0}{1}{#1}}%
+    \tikz@canvas@is@plane}
+\makeatother
+
+\graphicspath{{./Images}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{DEFINITION}
+
+
+\title{MATH \& 254 QUADRIC SURFACES}
+\author{Dharveen Suntheresen, Brendan Tea, Rohan Chilukuri}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\begin{abstract}
+     Slicing a sliced hypercone results in 2D conic sections. Quadric Surfaces are slices of 4D hypercones resulting in 3D conics sections which are analogous to slices of 3D cones resulting in 2D conic sections. Hypercones allow one to derive quadrics surfaces. Knowing this lets students understand how quadric surfaces are related to each other and share the same innate properties. 
+\end{abstract}
+
+% https://drive.google.com/file/d/1UwYJcHtt1yPhnc7i-Lkt5ivxwfwJugNP/edit
+\ \\ 
+\ \\ 
+\ \\ 
+\ \\ 
+\ \\ 
+
+
+\begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.25\textwidth,height=0.25\textheight,keepaspectratio]{lukeyfeelingkindaquirky.png}}
+        \caption[short]{Professor Luke Rawling - "Feeling kinda cute, might delete later"}
+\end{figure}
+
+\newpage
+\include{Introduction}
+\include{Types}
+% \include{Conclusion}
+
+\end{document}
